@@ -1,0 +1,331 @@
+/*common fonts and buttons*/
+html {
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+
+h1 {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    color: #0a3641;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+.caption {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #6C6E70;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*nav starts here*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: #f2f4f5;
+    margin-top: -100px;
+}
+
+.logo-nav {
+    block-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    margin-top: -15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    text-align: left;
+    background-color: #f2f4f5;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #47494a;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: #6C6E70;
+}
+
+/*.hamburger-menu {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px;
+}*/
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+    display: block;
+}
+
+.fa-solid {
+    float: right;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.search-field {
+    display: none;
+}
+
+/*arrow to top starts here*/
+.up {
+    width: 100%;
+    background: #fff no-repeat;
+    background-size: cover;
+}
+
+.fa-arrow-up {
+    position: fixed;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    width: 20px;
+    height: 40px;
+    background: #cfcfd0;
+    border-radius: 10%;
+    bottom: 20px;
+    right: 10px;
+    line-height: 10px;
+    text-decoration: none;
+}
+
+.fa-arrow-up:hover {
+    background: #B0CCD3;
+    line-height: 40px;
+    transition-duration: 4ms;
+}
+
+/*footer starts here*/
+.logo {
+    block-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #f2f4f5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+b {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+b:hover {
+    color: #6C6E70;
+}
+
+.visit p {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.opening-hours p {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.caption a {
+    color: #47494a;
+}
+
+.caption a:hover {
+    color: #000;
+    font-size: larger;
+}
+
+.icon {
+    margin-bottom: 20px;
+}
+
+.copyright {
+    background-color: #e8e9ea;
+    color: #000;
+    padding: 20px;
+}
+
+@media (min-width: 375px) {
+
+.logo-nav {
+    block-size: 50px;
+    margin-right: 80px;
+}
+
+/*footer*/
+.logo {
+    block-size: 50px;
+}
+
+}
+
+@media (min-width: 400px) {
+    
+.logo-nav {
+    margin-right: 120px;
+}
+
+}
+
+@media (min-width: 450px) {
+    
+.logo-nav {
+    margin-left: 50px;
+    margin-right: 160px;
+}
+    
+}
+
+@media (min-width: 600px) {
+
+.logo-nav {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+         
+nav {
+    display: flex;
+    float: right;
+    width: fit-content;
+    gap: 15px;
+    background-color: #dbacac00;
+    padding: 20px;
+    margin-left: 150px;
+    margin-top: -60px;
+}
+
+nav a {
+    font-weight: 500;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin-top: -15px;
+}
+
+/*belongs to page list of jackets*/
+.back-link {
+    width: fit-content;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/*.search-field {
+}*/
+
+.copyright {
+    font-size: 16px;
+}
+
+}
+
+@media (min-width: 800px) {
+
+.logo-nav {
+    block-size: 70px;
+    margin-left: 40px;
+}
+
+nav a {
+    margin-top: -25px;
+}
+
+/*.search-field {
+    display: flex;
+    margin-top: 4px;    
+}*/
+
+/*footer*/
+.footer {
+    text-align: left;
+}
+
+.logo {
+    block-size: 70px;
+    margin-left: 20px;
+}
+
+b {
+    margin-left: 20px;
+}
+
+.visit p {
+    margin-left: 20px;
+}
+
+.opening-hours p {
+    margin-left: 20px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.icon {
+    margin-left: 20px;
+    margin-top: -40px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 16px;
+}
+
+}

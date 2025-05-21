@@ -1,0 +1,155 @@
+/*top section*/
+h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+.text-box {
+    text-align: center;
+}
+
+.button-sign-in {
+    background-color: #0a3641;
+    color: #fff;
+    min-width: 80px;
+    padding: 5px 80px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+/*order section*/
+.flex-container {
+    background-color: #0a36413c;
+    text-align: center;
+}
+
+.img-jacket {
+    max-width: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sale {
+    color: #E71111;
+    font-weight: bold;
+}
+
+.price-container {
+    color: #0a3641;
+    background-color: #ffffff;
+}
+
+/*form*/
+.form-text {
+    color: #0a3641;
+}
+
+.form-input {
+    min-height: 30px;
+    min-width: 220px;
+    margin-top: 2px;
+    margin-bottom: 14px;
+}
+
+input[type=email] {
+    width: 40%;
+    padding: 2px;
+    border: 1px solid #bfb6b6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+input[type=tel] {
+    width: 40%;
+    padding: 2px;
+    border: 1px solid #bfb6b6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.button-continue {
+    background-color: #0a3641;
+    color: #ffffff;
+    padding: 10px 60px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 375px) {
+
+header {
+    margin-top: -160px;
+}
+
+main {
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.form-input {
+    min-width: 330px;
+}
+
+}
+
+@media (min-width: 450px) {
+
+.form-input {
+    display: block;
+    min-width: 400px;
+}
+
+}
+
+@media (min-width: 600px) {
+
+h1 {
+    text-align: left;
+    margin-left: 0px;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-left: 0px;
+}
+
+.text-box {
+    width: 250px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.flex-container {
+    text-align: left;
+}
+
+.img-jacket {
+    margin-left: 40px;
+}
+
+}
+
+@media (min-width: 1000px) {
+
+main {
+    margin-left: 100px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+fieldset {
+    max-width: 720px;
+}
+
+}

@@ -1,0 +1,31 @@
+/*this page is not ready*/
+#body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-container {
+  color: #000;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.terms-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  margin-bottom: 10px;
+}
+
+btn {
+  color: #216b7d;
+  background-color: #ccc;
+  margin-top: 40px;
+  padding: 10px 20px;
+  border: none;
+}

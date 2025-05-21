@@ -1,0 +1,41 @@
+.all-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  background-color: #216b7d;
+  color: #ccc;
+  margin-left: 20px;
+  padding: 10px 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.detail {
+  margin-top: 10px;
+}
+
+#input {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.back-link {
+  color: #216b7d;
+  background-color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 20px;
+}

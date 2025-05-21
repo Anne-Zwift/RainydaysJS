@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Cart Items</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/Logo_images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/Logo_images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="Images/Logo_images/android-chrome-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/Images/Logo_images/favicon.ico">
+  <script src="https://kit.fontawesome.com/d3e1febfe2.js" crossorigin="anonymous"></script>
+  <script src="/js/cart.js" defer></script>
+</head>
+<body>
+  <!--Cart page-->
+  <div class="note">The message will be here</div>
+  <div class="cart-page">
+    <div class="cart-header">
+      <a href="/checkout/cart.html" class="cart-link"><i class="fa-solid fa-cart-shopping">(<span id="cartCount"></span>)</i></a><!--contain the counter of adding items to cart -->
+      <a href="/checkout/confirmation/index.html" class="checkout-link" id="checkout-link">Checkout Confirmation</a>
+      <a href="/" class="btn-continue-shopping">Continue Shopping</a>
+    </div>
+    <div class="cart">
+      <div class="cart-items">
+        <div class="cart-item">
+          <p id="totalPrice"></p>
+          <div class="left">
+            <p class="product-name">Mens Casual Premium Slim Fit T-Shirts</p>
+          </div>
+          <button class="delete-btn">Delete</button>
+          <div class="right">
+            <p class="price">$22.3</p>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="left">
+            <p class="product-name">Mens Casual Premium Slim Fit T-Shirts</p>
+          </div>
+          <button class="delete-btn">Delete</button>
+          <div class="right">
+            <p class="price">$22.3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="up"></div>
+    <a href="cart.html" title="up"><i class="fa-solid fa-arrow-up"></i></a>
+  <footer class="footer">
+    <div>
+      <a href="/index.html" title="home page">
+      <img src="/Images/Img-logo.png" alt="Rainydays" class="logo"></a>
+    </div>
+    <aside>
+      <a href="./contact.html" title="contact us site">
+      <p><b>Visit</b></p></a>
+    <div class="visit">
+      <p>RAINYDAYS</p>
+      <p>Kjelsåsveien 143</p>
+      <p>0491 Oslo</p>
+    </div>
+    </aside>
+    <aside>
+      <a href="./contact.html" title="contact us site">
+      <p><b>Customer service</b></p></a>
+    <div class="opening-hours">
+      <p><i>Hours</i></p>
+      <p>Monday: Closed</p>
+      <p>Tuesday: 10:00 – 16:00</p>
+      <p>Wednesday: 10:00 – 16:00</p>
+      <p>Thursday: 10:00 – 16:00</p>
+      <p>Friday: 10:00 – 19:00</p>
+      <p>Saturday: 9:00 – 16:00</p>
+      <p>Sunday: 9:00 – 13:00</p>            
+    </div>
+    </aside>
+    <aside>
+    <div class="caption">     
+      <a href="#" title="privacy policy site">Privacy Policy</a>
+      <a href="/termsandconditions.html" title="terms & conditions site">Terms & Conditions</a>
+      <a href="#" title="contact us site">Contact Us</a>
+      <a href="#" title="products women">Our products</a>
+    </div>
+    <div class="icon">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    </aside>
+    <div class="copyright">&copy; 2024 Rainydays</div>
+  </footer>
+</body>
+</html>

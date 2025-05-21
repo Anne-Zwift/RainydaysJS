@@ -1,0 +1,209 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+fieldset {
+    max-width: 300px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.text-contact-hours {
+    display: block;
+    background-color: #ffffff;
+    color: #0a3641;
+    margin-left: 15px;
+    font-size: .6rem;
+    line-height: 1.2px;
+}
+
+.images-people-on-mountain {
+    background-image: url("../Images/IMG_p-on-top-s.jpg");
+    width: 40%;
+}
+
+.contact-item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #BFB6B6;
+    background-color: #ffffff;
+    width: fit-content;
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    font-size: 0.5rem;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.text-products {
+    color: #0a3641;
+    font-size: .7rem;
+    font-weight: lighter;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.form-input {
+    display: block;
+    font-size: 0.6rem;
+    min-height: 30px;
+    min-width: 250px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+}
+
+input[type=email] {
+    width: 40%;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid #bfb6b6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+input[type=tel] {
+    width: 40%;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid #bfb6b6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+input[type=number] {
+    width: 40%;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid #bfb6b6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.submit-button {
+    background-color: #0a3641;
+    color: #ffffff;
+    padding: 10px 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 0.6rem;
+}
+
+@media (min-width: 400px) {
+
+fieldset {
+    max-width: 400px;
+}
+
+.submit-button {
+    margin-left: 10px;
+    padding: 10px 102px;
+}
+
+}
+
+@media (min-width: 600px) {
+
+main {
+    margin-left: 7%;
+}
+
+fieldset {
+    max-width: 500px;
+}
+
+input[type=text] {
+    width: 80%;
+}
+
+input[type=email] {
+    width: 80%;
+}
+
+input[type=tel] {
+    width: 80%;
+}
+
+input[type=number] {
+    width: 80%;
+}
+
+select {
+    width: 80%;
+}
+
+textarea {
+    width: 80%;
+}
+
+.submit-button {
+    padding: 10px 178px;
+}
+
+}
+
+@media (min-width: 800px) {
+
+main {
+    margin-left: 15%;
+}
+    
+fieldset {
+    max-width: 600px;
+}
+
+input[type=email] {
+    padding: 5px 10px;
+}
+
+input[type=tel] {
+    padding: 5px 10px;
+}
+
+input[type=number] {
+    padding: 5px 10px;
+}
+
+select {
+    padding: 5px 10px;
+}
+
+textarea {
+    padding: 5px 10px;
+}
+
+.submit-button {
+    font-size: 0.7rem;
+    margin-left: 44px;
+}
+
+}
+
+@media (min-width: 1000px) {
+
+main {
+    margin-left: 25%;
+} 
+    
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rainydays is a website for the sale of quality jackets for all kinds of weather. We are world-leading in the use of Gore-Tex for highly durable waterproofness.">
+    <title>Rainydays jacket | Contact</title>
+    <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/contact.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Logo_images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Logo_images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Images/Logo_images/android-chrome-512x512.png">
+    <link rel="icon" type="image/x-icon" href="/Images/Logo_images/favicon.ico">
+    <script src="https://kit.fontawesome.com/d3e1febfe2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="./Images/Img-logo.png" alt="logo of Rainydays with the text pushing the comfort zone" class="logo">
+        </a>
+      <div class="nav-container">
+      <div class="icons">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      <form action="/search">
+        <input class="search-field" type="text" id="search-field" placeholder="search ..">
+        <label for="search-field"></label>
+      </form>
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" class="hamburger-menu"><i class="fa-solid fa-bars"></i></label>     
+      <nav>
+        <a href="./index.html" title="this is a link to the home page">Home</a>
+        <a href="./List-of-Jackets.html" title="this is a link to the site for products" class="active">Women's</a>
+        <a href="./List-of-Jackets.html" title="this is a link to the site for products" class="active">Men's</a>
+        <a href="./About.html" title="this is a link to the site about us">About</a>
+        <a href="./Contact.html" title="this is a link to the contact page">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Contact Us</h1>
+        <div class="contact-item">
+          <img src="./Images/img-ontopofmountain.jpg" alt="people on top of a mountain" class="images-people-on-mountain" >
+          <div class="text-contact-hours"> 
+            <p>Opening Hours</p>
+            <p>CET</p>
+            <p>Mon-Fri: 07-23</p>
+            <p>Saturday : 10-18</p>
+            <p>Sunday:13-21</p>
+          </div>
+        </div>
+        <form action="./Contact.html" id="register" name="contact">
+        <fieldset>
+          <h2>Your Contact Details</h2>
+          <label for="email" class="text-products">Mail</label>
+          <input class="form-input" placeholder="name@example.com" type="email" id="email" name="email" required value="">
+          <label for="firstName" class="text-products">First Name</label>
+          <input placeholder="First name" type="text" id="firstName" name="firstName" class="form-input" required minlength="3" value="">
+          <label for="lastName" class="text-products">Last Name</label>
+          <input placeholder="Last Name" type="text" id="lastName" name="lastName" class="form-input" required minlength="3" value="">
+          <label for="phone" class="text-products">Phone number</label>
+          <input placeholder="Phone number" type="tel" id="phone" name="phone" class="form-input">
+          <label for="category-number" class="text-products">Category specific</label>
+          <select id="category-number" name="category-number" class="form-input" >
+            <option value="--select--">Select Category</option>
+            <option value="Shopping-support">Shopping support</option>
+            <option value="Return-refund">Return and Refund</option>
+            <option value="Other">Other</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <h2>Message</h2>
+          <label for="message"></label>
+          <textarea placeholder="Type your message" id="message" name="message" class="form-input"></textarea>
+          <div>
+            <button class="submit-button">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer class="footer">
+      <div>
+          <a href="./index.html" title="home page">
+          <img src="./Images/Img-logo.png" alt="Rainydays" class="logo"></a>
+      </div>
+      <aside>
+          <a href="./contact.html" title="contact us site">
+          <p><b>Visit</b></p></a>
+          <div class="visit">
+              <p>RAINYDAYS</p>
+              <p>Kjelsåsveien 143</p>
+              <p>0491 Oslo</p>
+          </div>
+      </aside>
+      <aside>
+          <a href="./contact.html" title="contact us site">
+          <p><b>Customer service</b></p></a>
+      <div class="opening-hours">
+          <p><i>Hours</i></p>
+          <p>Monday: Closed</p>
+          <p>Tuesday: 10:00 – 16:00</p>
+          <p>Wednesday: 10:00 – 16:00</p>
+          <p>Thursday: 10:00 – 16:00</p>
+          <p>Friday: 10:00 – 19:00</p>
+          <p>Saturday: 9:00 – 16:00</p>
+          <p>Sunday: 9:00 – 13:00</p>            
+      </div>
+     </aside>
+     <aside>
+      <div class="caption">     
+          <a href="./privacy-policy.html" title="privacy policy site">Privacy Policy</a>
+          <a href="./terms-conditions.html" title="terms & conditions site">Terms & Conditions</a>
+          <a href="#" title="contact us site">Contact Us</a>
+          <a href="#" title="products women">Our products</a>
+      </div>
+      <div class="icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+      </div>
+     </aside>
+      <div class="copyright">&copy; 2024 Rainydays</div>
+  </footer>
+
+    <script src="/js/contact.js"></script>
+  </body>
+</html>
