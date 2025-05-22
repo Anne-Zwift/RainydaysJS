@@ -75,7 +75,7 @@ function displayData(data) {
     <p class="product-name">${product.title}</p>
     <div class="detail">
       <p class="price">${product.price}</p>
-     <a href="./product/index.html?id=${product.id}">View details</a>
+     <a href="/product/index.html?id=${product.id}">View details</a>
     </div>
     <button data-id=${product.id} class="add-to-cart">Add to Cart</button>
 </div>
