@@ -11,10 +11,13 @@
 }
 
 .find-btn {
+  font-family: "Roboto";
+  font-weight: bolder;
   color: #216b7d;
   background-color: #ccc;
   margin-left: 20px;
   padding: 10px 20px;
+  border-radius: 6px;
 }
 
 .all-products {

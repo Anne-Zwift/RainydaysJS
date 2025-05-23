@@ -21,10 +21,13 @@
 }
 
 .cta-button {
+    font-family: "Roboto";
+    font-weight: bolder;
     background-color: #0a3641;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
+    border-radius: 6px;
 }
 
 /*jackets*/
