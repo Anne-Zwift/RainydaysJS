@@ -18,6 +18,61 @@
   margin-left: 20px;
   padding: 10px 20px;
   border-radius: 6px;
+  border-style: none;
+}
+
+/*dark mode*/
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn-dark-mode {
+  width: 30px; /* Smaller button */
+  height: 30px;
+  border-radius: 50%; /* Makes it round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+  backdrop-filter: blur(10px); /* Frosted glass blur */
+  color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .btn-dark-mode {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #222;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark-mode:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.btn-dark-mode:active {
+  transform: scale(0.95);
+}
+
+.dark-mode .product {
+  background-color: #333;
+  border: 1px solid #444;
+}
+
+.dark-mode .add-to-cart {
+  background-color: #555;
+  color: #fff;
 }
 
 .all-products {
@@ -52,6 +107,7 @@
 .product-image img{
   max-width: 100%;
   max-height: 210px;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
