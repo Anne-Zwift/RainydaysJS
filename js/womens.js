@@ -96,3 +96,37 @@ function showNotification(message) {
         note.style.left = "-300px";
     }, 3000)
 }
+
+//dark mode
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+   
+    const isDarkMode = document.body.classList.contains("dark-mode");
+
+    themeToggle.style.backgroundColor = isDarkMode ? "black" : "white";
+    themeToggle.style.color = isDarkMode ? "white" : "black";
+    themeToggle.textContent = isDarkMode ? "☀️" : "🌙";
+    
+    
+    // Save user preference in localStorage
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
+    
+
+// Apply stored theme preference on page load
+window.addEventListener("load", () => {
+    const savedTheme = localStorage.getItem("theme");
+    
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeToggle.style.backgroundColor = "black";
+        themeToggle.style.color = "white";
+        themeToggle.textContent = "☀️";
+    } else {
+        themeToggle.style.backgroundColor = "white";
+        themeToggle.style.color = "black";
+        themeToggle.textContent = "🌙";
+    }
+});
