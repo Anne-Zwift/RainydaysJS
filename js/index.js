@@ -23,7 +23,7 @@ async function fetchData() {
         const response = await fetch(API_link);//fetching data and save it in a response
 
         if (!response.ok) {
-            throw new Error("Network response was not ok");
+            throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
 
 
@@ -56,12 +56,20 @@ async function fetchData() {
         });
 
     } catch (error) {
-
+        showNotification(`Failed to load products: ${error.message}`);
+    } finally {
+        spinner.style.display = "none";
     }
 }
 fetchData();
 
 function displayData(data) {
+    if (!data || !Array.isArray(data) || !data.length === 0) {
+        showNotification("No products found. Please try again later.");
+        return;
+    }
+
+    productsContainer.innerHTML = "";//clear previous content
     data.forEach((product) => {
         const productTemplate = `
     
