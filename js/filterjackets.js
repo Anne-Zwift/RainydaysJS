@@ -9,8 +9,15 @@ const storedCartItems = JSON.parse(localStorage.getItem("cart"));
 let cart = storedCartItems ? storedCartItems: [];
 cartCount.textContent = cart.length;
 
+
+let cachedData = null; //stores the fetched data
+
 const getData = async() => {
+  if (cachedData) {
+    return cachedData; //return cached data if available
+  }
   
+
   try {
   //response
   const res = await fetch(API_link);//getting the endpoint url
@@ -18,11 +25,17 @@ const getData = async() => {
   if (!res.ok) {
     throw new Error(`HTTP error! status: ${res.status}`);
   }
-  const data = await res.json();//using json method to get the array data objects
-  return data;
+  
+  cachedData = await res.json(); //stores data in cache
+  return cachedData;
+
   } catch (error) {
     console.error('Error fetching data:', error);
   }
+};
+
+const clearCache = () => {
+  cachedData = null;
 };
 
 
