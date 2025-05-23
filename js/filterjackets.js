@@ -50,16 +50,32 @@ const displaySearch = async () => {
     const data = await getData();
 
   let dataFilter = data.data.filter((data) => {
+    const queryLower = query.toLowerCase().trim();
+
     if (!query) {
     return true;
   } else{
-    const titleMatch = data.title && data.title.toLowerCase().includes(query);
+   
     const baseColorMatch = data.baseColor && data.baseColor.toLowerCase().includes(query);
-    const tagsMatch = data.tags && data.tags.some(tag => tag.toLowerCase().includes(query));
-    const genderMatch = data.gender && new RegExp(`\\b${query}\\b`).test(data.gender.toLowerCase());
-    
+    const tagsMatch = data.tags && data.tags.some(tag => tag.toLowerCase().trim() === queryLower);
+    const formatTitle = title => title.replace(/^Rainy Days\s+/i, "").toLowerCase();
+    const titleMatch = data.title && formatTitle(data.title).includes(query);
+
+
+    // Strict gender filtering
+    const genderMatch = data.gender && (
+      (["men", "male"].includes(query.toLowerCase().trim()) && data.gender.toLowerCase().trim() === "male") || 
+      (["women", "female"].includes(query.toLowerCase().trim()) && data.gender.toLowerCase().trim() === "female")
+);
+
+      console.log("Query:", query);
+      console.log("Product Gender from API:", data.gender);
+      console.log("Full Product Data:", data);
+
     return titleMatch || baseColorMatch || tagsMatch || genderMatch;
+
   }
+
 });
 
   if (dataFilter.length === 0) {
