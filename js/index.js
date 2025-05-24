@@ -90,9 +90,11 @@ function displayData(data) {
 </div>
 
         `;
-    spinner.style.display = "none";
+
     productsContainer.insertAdjacentHTML('beforeend', productTemplate);
     });
+
+    spinner.style.display = "none";
 }
 
 function showNotification(message) {
