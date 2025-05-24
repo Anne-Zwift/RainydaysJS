@@ -1,9 +1,15 @@
 const cartCount = document.querySelector("#cartCount");
-const storedCartItems = JSON.parse(localStorage.getItem('cart'));
-
-let cart = storedCartItems? storedCartItems: [];
+const storedCartItems = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 
+let cart = [];
+try {
+  const storedCartItems = localStorage.getItem('cart');
+  cart = storedCartItems ? JSON.parse(storedCartItems) : [];
+} catch (error) {
+  console.error("Error parsing cart data", error);
+  cart = [];
+}
 cartCount.textContent = cart.length;
 
 //create a function and display all the items in the cart to the page
@@ -39,7 +45,7 @@ function displayCartItems(cartItems) {
 
 displayCartItems(cart);
 
-//select deletebtns
+//select delete btns
 const deleteBtns = document.querySelectorAll(".delete-btn");
 
 deleteBtns.forEach((btn) => {
@@ -48,6 +54,7 @@ deleteBtns.forEach((btn) => {
     const productId = event.target.dataset.id;
     //find the index (0,1,2...) gives back the index number
     const productIndex = cart.findIndex((cartItem) => cartItem.id == productId);
+    if (productIndex !== -1) {
     //remove the item from the array
     cart.splice(productIndex, 1); //number 1 is amount of items removed
     //update the local storage
@@ -55,8 +62,11 @@ deleteBtns.forEach((btn) => {
     //update the cart
     displayCartItems(cart);
     cartCount.textContent = cart.length;//makes the cart update at the same time as we push delete button
-    showNotification("Product deleted")
-
+    showNotification("Product deleted");
+    } else {
+      showNotification("Error: Product not found in cart.");
+    }
+    
   })
 });
 
