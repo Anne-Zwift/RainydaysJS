@@ -23,13 +23,16 @@ async function fetchData() {
         const response = await fetch(API_link);//fetching data and save it in a response
 
         if (!response.ok) {
-
+            throw new Error(`HTTP error! Status: ${response.status}`); 
         }
-
 
         const data = await response.json();//convert it back to js and save it in to data
 
-        displayData(data.data.filter((item) => {return item.tags.includes("mens");}));
+         if (!data || !Array.isArray(data.data)) {
+            throw new Error("Invalid data format received from API.");  
+        }
+
+        displayData(data.data.filter(item => item.tags.includes("mens")));
     
         //Add to cart functionality
         //select all Cart Buttons
@@ -56,7 +59,8 @@ async function fetchData() {
         });
 
     } catch (error) {
-
+          console.error(`Error fetching data: ${error.message}`, error);
+        showNotification("Failed to load products. Please try again.");
     }
 }
 fetchData();
@@ -82,9 +86,10 @@ function displayData(data) {
 </div>
 
         `;
-    spinner.style.display = "none";
+    
     productsContainer.insertAdjacentHTML('beforeend', productTemplate);
     });
+    spinner.style.display = "none";
 }
 
 function showNotification(message) {
