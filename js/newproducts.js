@@ -56,7 +56,8 @@ async function fetchData() {
         });
 
     } catch (error) {
-
+        console.error(`Error fetching data: ${error.message}`, error);
+        showNotification("Failed to load products. Please try again.");
     }
 }
 fetchData();
@@ -82,9 +83,11 @@ function displayData(data) {
 </div>
 
         `;
-    spinner.style.display = "none";
+   
     productsContainer.insertAdjacentHTML('beforeend', productTemplate);
     });
+    
+    spinner.style.display = "none";
 }
 
 function showNotification(message) {
