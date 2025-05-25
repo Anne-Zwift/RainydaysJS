@@ -19,13 +19,13 @@ function displayCartItems(cartItems) {
     <div class="left">
       <img
         src=${cartItem.image.url}
-        alt=""
+        alt="Image of jacket"
       />
       <p class="product-name">
       ${cartItem.title}
       </p>
     </div>
-    <button data-id=${cartItem.id} class="delete-btn">Delete</button>
+    <button data-id=${cartItem.id} class="delete-btn" title="Delete item">Delete</button>
     <div class="right">
       <p class="price">${cartItem.price}</p>
     </div>
@@ -65,7 +65,8 @@ deleteBtns.forEach((btn) => {
 function showNotification(message) {
   const note = document.querySelector(".note");
   note.textContent = message;
-  note.style.left = "10px";
+  note.style.left = "50px";
+  note.style.padding = "20px";
   setTimeout(() => {
       note.style.left = "-300px";
   }, 3000)

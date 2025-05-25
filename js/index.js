@@ -100,7 +100,9 @@ function displayData(data) {
 function showNotification(message) {
     const note = document.querySelector(".note");
     note.textContent = message;
-    note.style.left = "10px";
+    note.style.top = "200px";
+    note.style.left = "80px";
+
     setTimeout(() => {
         note.style.left = "-300px";
     }, 3000)

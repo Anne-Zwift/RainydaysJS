@@ -95,7 +95,7 @@ const displaySearch = async () => {
           <p class="base-color">${baseColor}</p>
           <p class="sizes">${sizes.join(" ")}</p>
           <p class="gender">${gender}</p>
-          <button data-id=${id} class="add-to-cart">Add to Cart</button>
+          <button data-id=${id} class="add-to-cart" title="Great choice!">Add to Cart</button>
         </div>
       </div>
     </div>
