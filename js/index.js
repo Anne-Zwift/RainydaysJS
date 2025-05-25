@@ -77,15 +77,15 @@ function displayData(data) {
 
   <div id="loading"></div>
   <div class="product">
-  <div class="product-image">
-    <img src="${product.image.url}" alt="">
+  <div class="product-image" title="Perfect choice for a rainy day">
+    <img src="${product.image.url}" alt="Image of jacket">
   </div>
     <p class="product-name">${product.title}</p>
     <div class="detail">
       <p class="price">${product.price}</p>
      <a href="./product/index.html?id=${product.id}">View details</a>
     </div>
-    <button data-id=${product.id} class="add-to-cart">Add to Cart</button>
+    <button data-id=${product.id} class="add-to-cart" title="Add product">Add to Cart</button>
 </div>
 </div>
 
