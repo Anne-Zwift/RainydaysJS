@@ -40,27 +40,32 @@ displayCartItems(cart);
 
 //select deletebtns
 const deleteBtns = document.querySelectorAll(".delete-btn");
-deleteBtns.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
 
-    const confirmed = confirm('Are you sure you want to delete this item?');
-    if (!confirmed) {
-      return;
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+        const confirmed = confirm("Are you sure you want to delete this item?");
+        if (!confirmed) return; // Ensure user can cancel
+
+        const productId = event.target.dataset.id;
+        const productIndex = cart.findIndex(cartItem => cartItem.id == productId);
+
+        if (productIndex !== -1) {
+            // Remove the item from the array
+            cart.splice(productIndex, 1);
+
+            // Update local storage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Update the cart UI
+            displayCartItems(cart);
+            cartCount.textContent = cart.length;
+            showNotification("Product deleted");
+        } else {
+            showNotification("Error: Product not found in cart");
+        }
     }
-    const productId = event.target.dataset.id;
-    //find the index (0,1,2...) gives back the index number
-    const productIndex = cart.findIndex((cartItem) => cartItem.id == productId);
-    //remove the item from the array
-    cart.splice(productIndex, 1); //number 1 is amount of items removed
-    //update the local storage
-    localStorage.setItem("cart", JSON.stringify(cart));
-    //update the cart
-    displayCartItems(cart);
-    cartCount.textContent = cart.length;//makes the cart update at the same time as we push delete button
-    showNotification("Product deleted")
-
-  })
 });
+
 
 function showNotification(message) {
   const note = document.querySelector(".note");
@@ -82,3 +87,4 @@ let roundPrice = Math.round(totalPrice * 100) / 100;
 });
 
 document.getElementById('totalPrice').textContent = 'Total Price: ' + totalPrice + ',-.';
+
