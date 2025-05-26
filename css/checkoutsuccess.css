@@ -73,7 +73,7 @@ div.note {
     background-color: #4CAF50; /* Green success message */
     color: white;
     max-width: 200px;
-
+    margin-top: 20px;
     margin-left: 20px;
     padding: 40px;
     border-radius: 6px;
