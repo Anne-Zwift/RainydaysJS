@@ -78,13 +78,16 @@ function showNotification(message) {
 }
 
 //getting the totalPrice
-let totalPrice = 0;
-let roundPrice = Math.round(totalPrice * 100) / 100;
-  storedCartItems.forEach(item => {
-  
-  totalPrice += item.price;
-  
-});
+let totalPrice = storedCartItems.reduce((sum, item) => sum + (item.price || 0), 0);
 
-document.getElementById('totalPrice').textContent = 'Total Price: ' + totalPrice + ',-.';
+totalPrice = Math.round(totalPrice * 100) / 100;
+
+const totalPriceElement = document.getElementById("totalPrice");
+if (totalPriceElement) {
+  totalPriceElement.textContent = `Total Price: ${totalPrice},-.`;
+} else {
+  console.error("Total Price element not found.");
+}
+
+
 

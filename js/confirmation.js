@@ -1,7 +1,6 @@
 const cartCount = document.querySelector("#cartCount");
 const storedCartItems = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
-
 let cart = [];
 try {
   const storedCartItems = localStorage.getItem('cart');
@@ -45,30 +44,34 @@ function displayCartItems(cartItems) {
 
 displayCartItems(cart);
 
-//select delete btns
+//select deletebtns
 const deleteBtns = document.querySelectorAll(".delete-btn");
 
-deleteBtns.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+        const confirmed = confirm("Are you sure you want to delete this item?");
+        if (!confirmed) return; // Ensure user can cancel
 
-    const productId = event.target.dataset.id;
-    //find the index (0,1,2...) gives back the index number
-    const productIndex = cart.findIndex((cartItem) => cartItem.id == productId);
-    if (productIndex !== -1) {
-    //remove the item from the array
-    cart.splice(productIndex, 1); //number 1 is amount of items removed
-    //update the local storage
-    localStorage.setItem("cart", JSON.stringify(cart));
-    //update the cart
-    displayCartItems(cart);
-    cartCount.textContent = cart.length;//makes the cart update at the same time as we push delete button
-    showNotification("Product deleted");
-    } else {
-      showNotification("Error: Product not found in cart.");
+        const productId = event.target.dataset.id;
+        const productIndex = cart.findIndex(cartItem => cartItem.id == productId);
+
+        if (productIndex !== -1) {
+            // Remove the item from the array
+            cart.splice(productIndex, 1);
+
+            // Update local storage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Update the cart UI
+            displayCartItems(cart);
+            cartCount.textContent = cart.length;
+            showNotification("Product deleted");
+        } else {
+            showNotification("Error: Product not found in cart");
+        }
     }
-    
-  })
 });
+
 
 function showNotification(message) {
   const note = document.querySelector(".note");
@@ -80,12 +83,30 @@ function showNotification(message) {
 }
 
 //getting the totalPrice
-let totalPrice = 0;
-let roundPrice = Math.round(totalPrice * 100) / 100;
-  storedCartItems.forEach(item => {
-  
-  totalPrice += item.price;
-  
-});
+let totalPrice = storedCartItems.reduce((sum, item) => sum + (item.price || 0), 0);
 
-document.getElementById('totalPrice').textContent = 'Total Price: ' + totalPrice + ',-.';
+totalPrice = Math.round(totalPrice * 100) / 100;
+
+const totalPriceElement = document.getElementById("totalPrice");
+if (totalPriceElement) {
+  totalPriceElement.textContent = `Total Price: ${totalPrice},-.`;
+} else {
+  console.error("Total Price element not found.");
+}
+
+function handleCheckoutSuccess() {
+  //clear the cart array
+  cart = [];
+  //update localstorage
+  localStorage.removeItem('cart');
+  //update the UI
+  cartCount.textContent = cart.length;
+  displayCartItems(cart);
+  showNotification("Checkout successful! Thank you for shopping with Rainydays.");
+
+  //reload
+  setTimeout(() => {
+    window.location.reload(true);
+  }, 2000);//refresh after 2 sec
+
+}
