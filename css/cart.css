@@ -4,6 +4,10 @@ body {
   box-sizing: border-box;
 }
 
+i.fa-solid   {
+  padding-right: 20px;
+}
+
 .cart-header {
   border-bottom: 1px solid #858484;
   background-color: #ffffff;
@@ -124,7 +128,6 @@ a.cart-link {
 #totalPrice {
   margin-left: 420px;
   font-size: bolder;
-  text-decoration: underline;
 }
 
 .product-name {
@@ -137,6 +140,40 @@ a.cart-link {
   
 .price {
   margin-left: 120px;
+}
+
+}
+
+@media (min-width: 768px) {
+
+i.fa-solid   {
+  margin-right: 180px;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+#totalPrice {
+  margin-left: 640px;
+  font-size: bolder;
+  text-decoration: underline;
+}
+
+}
+
+@media (min-width: 1440px) {
+
+i.fa-solid   {
+  margin-right: 700px;
+}
+
+}
+
+@media (min-width: 1900px) {
+
+i.fa-solid   {
+  margin-right: 1100px;
 }
 
 }
