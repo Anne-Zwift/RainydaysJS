@@ -31,6 +31,17 @@ a.cart-link {
   margin-bottom: 20px;
 }
 
+.btn-continue-shopping {
+  display: block;
+  width:fit-content;
+  color: white;
+  background-color: rgb(137, 144, 137);
+  margin-left: 20px;
+  margin-bottom: 40px;
+  padding: 8px 25px;
+  border-radius: 6px;
+}
+
 .cart-items {
   display: flex;
   flex-direction: column;
@@ -96,17 +107,6 @@ a.cart-link {
   border: none;
   outline: none;
   border-radius: 3px;
-}
-
-.btn-continue-shopping {
-  display: block;
-  width:fit-content;
-  color: white;
-  background-color: rgb(137, 144, 137);
-  margin-left: 20px;
-  margin-bottom: 40px;
-  padding: 8px 25px;
-  border-radius: 6px;
 }
 
 @media (min-width: 600px) {
