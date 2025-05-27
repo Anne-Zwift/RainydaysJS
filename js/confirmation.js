@@ -152,7 +152,7 @@ function handleCheckoutSuccess() {
     // Redirect to prevent stale data issues
     setTimeout(() => {
         window.location.href = "../../index.html"; // Redirects to home page instead of confirmation page
-    }, 2000);
+    }, 5000);
 }
 
 handleCheckoutSuccess();
