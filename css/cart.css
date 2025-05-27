@@ -4,10 +4,6 @@ body {
   box-sizing: border-box;
 }
 
-i.fa-solid   {
-  padding-right: 20px;
-}
-
 .cart-header {
   border-bottom: 1px solid #858484;
   background-color: #ffffff;
@@ -32,9 +28,6 @@ a.cart-link {
 .cart-page {
   background-color: rgb(253, 241, 241);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   margin-bottom: 20px;
 }
 
@@ -46,6 +39,7 @@ a.cart-link {
 
 .cart-item {
   max-width: 100%;
+  margin-bottom: 40px;
   margin-left: 20px;
 }
 
@@ -60,6 +54,7 @@ a.cart-link {
 
 .price {
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .note {
@@ -147,7 +142,7 @@ a.cart-link {
 @media (min-width: 768px) {
 
 i.fa-solid   {
-  margin-right: 180px;
+  margin-right: 80px;
 }
 
 }
@@ -164,16 +159,19 @@ i.fa-solid   {
 
 @media (min-width: 1440px) {
 
-i.fa-solid   {
-  margin-right: 700px;
+.cart-items {
+margin-left: 500px;
+}
+
+#totalPrice {
+  margin-left: 700px;
 }
 
 }
 
 @media (min-width: 1900px) {
 
-i.fa-solid   {
-  margin-right: 1100px;
+#totalPrice {
+  margin-left: 400px;
 }
-
 }
